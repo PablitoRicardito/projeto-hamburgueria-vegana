@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+.border {
+    border: 1px solid red;
+}
+
+ul {
+    all: unset;
+    list-style-type: none;
+}
+
+li {
+    all: unset;
+}
+
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+header {
+    display: grid;
+    place-content: center;
+    padding: 20px;
+}
+
+header > div {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+header > div > h1 {
+    font-size: 100px;
+}
+
+nav {
+    padding: 10px;
+}
+
+nav > ul {
+    display: flex;
+    gap: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+main > section {
+    max-width: 1000px;
+    width: 100vw;
+    margin: auto;
+}

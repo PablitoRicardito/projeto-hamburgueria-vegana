@@ -16,19 +16,65 @@ function cardapio() {
     section_content.classList.add("cardapio_container");
     Cardapio.map((element) => {
         section_content.innerHTML += `
-            <button type="button" class="cardapio_button">
-                <div style="overflow: hidden; height: 167px;" class="top"><img src="${element.imagem}" alt="imagem de hamburguer"></div>
-                <div style="display:flex; align-items: center; justify-content: space-between; padding: 10px;">
-                    <div>
-                        <h2>${element.nome}</h2>
-                    </div>
-                    <div>
-                        <span>R$${element.valor}</span>
-                    </div>
+        <button type="button" class="cardapio_button">
+            <div style="overflow: hidden; height: 167px;" class="top">
+                <img src="${element.imagem}" alt="imagem de hamburguer">
+            </div>
+            <div style="display:flex; align-items: center; justify-content: space-between; padding: 10px;">
+                <div>
+                    <h2>${element.nome}</h2>
                 </div>
-            </button>`;
+                <div>
+                    <span>R$${element.valor}</span>
+                </div>
+            </div>
+        </button>`;
+    });
+    const cardapioButton = [...document.querySelectorAll("button.cardapio_button")]
+    cardapioButton.forEach((button, index) => {
+        button.addEventListener("click", () => {
+            cardapio_modal(Cardapio[index]);
+        });
     })
+    console.log(cardapioButton);
 }
+
+function cardapio_modal(lanche) {
+    const modalContainer = document.querySelector("div#modal_container");
+    modalContainer.classList.add("modal_container");
+
+    modalContainer.innerHTML = 
+    `
+    <section class="modal">
+        <div class="left_container">
+            <img src="${lanche.imagem}" alt="imagem de hamburguer">
+        </div>
+        <div class="right_container">
+            <div class="top">
+                <h1>${lanche.nome}</h1>
+                <div class="close_button" style="cursor: pointer;">
+                    <i class="ph ph-x-circle"></i>
+                </div>
+            </div>
+            <div class="middle">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non illum quasi odio cupiditate. Eos rerum rem, repellendus ratione tempore neque doloremque earum ducimus voluptates! Iusto dignissimos iure omnis consequatur! Porro? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt molestias architecto quos necessitatibus veritatis totam vel possimus sapiente, quas iste rerum maiores dolorum, sequi quasi mollitia voluptates magni ea explicabo.</p>
+                <ul></ul>
+            </div>
+        </div>
+    </section>
+    `
+
+    const modal = document.querySelector("section.modal");
+    console.log(modal)
+    const closeButton = document.querySelectorAll("div.close_button");
+    closeButton.forEach((button) => {
+        button.addEventListener("click", () => {
+            modalContainer.removeChild(modal);
+            modalContainer.classList.remove("modal_container");
+        });
+    });
+}
+
 
 document.body.onload = inicio()
 navigationButton[0].addEventListener("click", inicio);

@@ -86,3 +86,27 @@ main > section {
     width: 100%;
     object-fit: cover;
 }
+
+.modal_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(150, 150, 150, 0.4);
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
+
+    display: grid;
+    place-content: center;
+}
+
+.modal {
+    background: white;
+    border-radius: 2rem;
+
+    max-width: 1000px;
+    height: 600px;
+    display: flex;
+}

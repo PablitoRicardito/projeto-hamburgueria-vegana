@@ -2,6 +2,7 @@ const cardapio = [
     {
         nome: "Hambúrguer de grão-de-bico e beterraba",
         tipo: "hamburguer",
+        ingredientes: ["ingrediente 1", "ingrediente 2", "ingrediente 3", "ingredientes 4"],
         imagem: "https://mfacdn.cachefly.net/chooseveg/sites/4/2019/03/Captura-de-Tela-2017-12-08-as-12.52.06.jpg",
         descricao: "Hambúrguer feito com o melhor grão-de-bico que exite e beterraba",
         valor: 14.99,
@@ -9,6 +10,7 @@ const cardapio = [
     {
         nome: "Hambúrguer de pinhão",
         tipo: "hamburguer",
+        ingredientes: ["ingrediente 1", "ingrediente 2", "ingrediente 3", "ingredientes 4"],
         imagem: "https://mfacdn.cachefly.net/chooseveg/sites/4/2019/03/pinhao2.jpg",
         descricao: "Hambúrguer feito com o melhor pinhão",
         valor: 19.99,
@@ -16,6 +18,7 @@ const cardapio = [
     {
         nome: "Hambúrguer de feijão preto",
         tipo: "hamburguer",
+        ingredientes: ["ingrediente 1", "ingrediente 2", "ingrediente 3", "ingredientes 4"],
         imagem: "https://mfacdn.cachefly.net/chooseveg/sites/4/2019/03/Captura-de-Tela-2017-12-08-as-13.00.00.jpg",
         descricao: "Hambúrguer feito com o melhor feijão preto",
         valor: 10.99,
@@ -23,6 +26,7 @@ const cardapio = [
     {
         nome: " Hambúrguer de feijão com Beterraba ",
         tipo: "hamburguer",
+        ingredientes: ["ingrediente 1", "ingrediente 2", "ingrediente 3", "ingredientes 4"],
         imagem: "https://mfacdn.cachefly.net/chooseveg/sites/4/2019/03/Captura-de-Tela-2017-12-08-as-12.58.54.jpg",
         descricao: "Hambúrguer feito com o melhor feijão com beterraba",
         valor: 19.99,
@@ -30,6 +34,7 @@ const cardapio = [
     {
         nome: "Hambúrguer de grão-de-bico com molho de curry verde",
         tipo: "hamburguer",
+        ingredientes: ["ingrediente 1", "ingrediente 2", "ingrediente 3", "ingredientes 4"],
         imagem: "https://mfacdn.cachefly.net/chooseveg/sites/4/2019/03/Hamburguer-de-Grao-de-Bico-4-Atleta-Veg.jpg",
         descricao: "Hambúrguer feito com o melhor grão-de-bico com molho de curry verde",
         valor: 19.99,
@@ -37,6 +42,7 @@ const cardapio = [
     {
         nome: "Hambúrguer de palmito",
         tipo: "hamburguer",
+        ingredientes: ["ingrediente 1", "ingrediente 2", "ingrediente 3", "ingredientes 4"],
         imagem: "https://mfacdn.cachefly.net/chooseveg/sites/4/2019/03/palmito2.jpg",
         descricao: "Hambúrguer feito com o melhor palmito",
         valor: 19.99,

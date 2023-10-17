@@ -4,7 +4,9 @@ const navigationButton = [...document.querySelectorAll(".nav")];
 
 function inicio() {
     section_content.innerHTML = ""
-    section_content.classList.remove("cardapio_container");
+    if(section_content.classList.contains("cardapio_container")){
+        section_content.classList.remove("cardapio_container");
+    }
     section_content.innerHTML = `<h1>Isso aqui é pra ser o início</h1>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore omnis delectus voluptate hic inventore dolores laudantium amet veniam voluptates et, soluta nihil illo quibusdam vel. Error nobis illum asperiores commodi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus dignissimos sed sequi, tempore autem expedita. Dolorem modi earum iste totam at nostrum dicta ratione consequatur culpa, doloribus perferendis quos quo.</p>`
 }
@@ -27,6 +29,7 @@ function cardapio() {
             </button>`;
     })
 }
+
 document.body.onload = inicio()
 navigationButton[0].addEventListener("click", inicio);
 navigationButton[1].addEventListener("click", cardapio);

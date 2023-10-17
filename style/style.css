@@ -18,6 +18,10 @@ a {
     cursor: pointer;
 }
 
+button {
+    all: unset;
+}
+
 header {
     display: grid;
     place-content: center;
@@ -51,4 +55,34 @@ main > section {
     max-width: 1000px;
     width: 100vw;
     margin: auto;
+}
+
+.cardapio_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.cardapio_button {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    height: 280px;
+    /* padding: 10px; */
+    border-radius: 8px;
+    box-shadow: 0px 1px 5px rgba(128, 128, 128, 0.418);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* .cardapio_button > .top {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+} */
+
+.cardapio_button > div > img {
+    /* height: 100%; */
+    width: 100%;
+    object-fit: cover;
 }

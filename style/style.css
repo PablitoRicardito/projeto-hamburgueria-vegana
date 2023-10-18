@@ -1,16 +1,28 @@
 @charset "UTF-8";
 
+:root {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
 .border {
-    border: 1px solid red;
-}
-
-ul {
-    all: unset;
-    list-style-type: none;
-}
-
-li {
-    all: unset;
+    border: .1rem solid red;
 }
 
 a {
@@ -25,34 +37,40 @@ button {
 header {
     display: grid;
     place-content: center;
-    padding: 20px;
+    padding: 2.0rem;
 }
 
 header > div {
     display: flex;
-    gap: 20px;
+    gap: 2.0rem;
     align-items: center;
 }
 
 header > div > h1 {
-    font-size: 100px;
+    font-size: 10.0rem;
 }
 
 nav {
-    padding: 10px;
+    padding: 1.0rem;
 }
 
 nav > ul {
+    all: unset;
+    list-style-type: none;
     display: flex;
-    gap: 20px;
+    gap: 2.0rem;
+}
+
+nav > ul > li {
+    all: unset;
 }
 
 main {
-    padding: 20px;
+    padding: 2.0rem;
 }
 
 main > section {
-    max-width: 1000px;
+    max-width: 100.0rem;
     width: 100vw;
     margin: auto;
 }
@@ -60,17 +78,17 @@ main > section {
 .cardapio_container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
+    gap: 3.0rem;
 }
 
 .cardapio_button {
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
-    height: 280px;
-    /* padding: 10px; */
-    border-radius: 8px;
-    box-shadow: 0px 1px 5px rgba(128, 128, 128, 0.418);
+    border: .1rem solid red;
+    height: 28.0rem;
+    /* padding: 1.0rem; */
+    border-radius: .8rem;
+    box-shadow: .0rem .1rem .5rem rgba(128, 128, 128, 0.418);
     cursor: pointer;
     overflow: hidden;
 }
@@ -106,7 +124,20 @@ main > section {
     background: white;
     border-radius: 2rem;
 
-    max-width: 1000px;
-    height: 600px;
+    max-width: 100.0rem;
+    height: 60.0rem;
     display: flex;
+    overflow: hidden;
+}
+
+.modal > .right_container {
+    padding: 1.5rem;
+}
+
+.cart_button {
+    padding: 1rem;
+    border-radius: .8rem;
+    cursor: pointer;
+    background-color: rgb(185, 46, 46);
+    color: white;
 }

@@ -75,13 +75,13 @@ main > section {
     margin: auto;
 }
 
-.cardapio_container {
+.menu_container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 3.0rem;
 }
 
-.cardapio_button {
+.menu_button {
     display: flex;
     flex-direction: column;
     border: .1rem solid red;

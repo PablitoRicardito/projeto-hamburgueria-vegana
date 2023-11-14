@@ -9,8 +9,73 @@ function inicio() {
   if (section_content.classList.contains("menu_container")) {
     section_content.classList.remove("menu_container");
   }
-  section_content.innerHTML = `<h1>Isso aqui é pra ser o início</h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore omnis delectus voluptate hic inventore dolores laudantium amet veniam voluptates et, soluta nihil illo quibusdam vel. Error nobis illum asperiores commodi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus dignissimos sed sequi, tempore autem expedita. Dolorem modi earum iste totam at nostrum dicta ratione consequatur culpa, doloribus perferendis quos quo.</p>`;
+  section_content.innerHTML = `
+   <img src="https://gkpb.com.br/wp-content/uploads/2022/12/Whopper-em-Dobro-1024x576.jpg" alt="">
+  <div class="row img">
+        <div class="column img">
+            <img src="https://gkpb.com.br/wp-content/uploads/2022/12/Whopper-em-Dobro-1024x576.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+        </div>
+        <div class="column img">
+            <img src="https://gkpb.com.br/wp-content/uploads/2022/12/Whopper-em-Dobro-1024x576.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+        </div>
+        <div class="column img">
+            <img src="https://gkpb.com.br/wp-content/uploads/2022/12/Whopper-em-Dobro-1024x576.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+        </div>
+        <div class="column img">
+            <img src="https://gkpb.com.br/wp-content/uploads/2022/12/Whopper-em-Dobro-1024x576.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close cursor"</span>
+        <div class="modal-content">
+
+            <div class="mySlides img">
+                <div class="numbertext">1 / 4</div>
+                <img src="https://gkpb.com.br/wp-content/uploads/2022/12/Whopper-em-Dobro-1024x576.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides img">
+                <div class="numbertext">2 / 4</div>
+                <img src="https://gkpb.com.br/wp-content/uploads/2022/12/Whopper-em-Dobro-1024x576.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides img">
+                <div class="numbertext">3 / 4</div>
+                <img src="https://gkpb.com.br/wp-content/uploads/2022/12/Whopper-em-Dobro-1024x576.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides img">
+                <div class="numbertext">4 / 4</div>
+                <img src="https://gkpb.com.br/wp-content/uploads/2022/12/Whopper-em-Dobro-1024x576.jpg" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+
+            <div class="column">
+                <img class="demo cursor img" src="https://gkpb.com.br/wp-content/uploads/2022/12/Whopper-em-Dobro-1024x576.jpg" style="width:100%" onclick="currentSlide(1)"
+                    alt="Brincando com as bombinhas do Machado Festas">
+            </div>
+            <div class="column img">
+                <img class="demo cursor" src="https://gkpb.com.br/wp-content/uploads/2022/12/Whopper-em-Dobro-1024x576.jpg" style="width:100%" onclick="currentSlide(2)"
+                    alt="Momentos inesqueciveis com familiares foram feitos naquela garagem">
+            </div>
+            <div class="column img">
+                <img class="demo cursor" src="https://gkpb.com.br/wp-content/uploads/2022/12/Whopper-em-Dobro-1024x576.jpg" style="width:100%" onclick="currentSlide(3)"
+                    alt="Outro acontecimento na Machado Festas">
+            </div>
+            <div class="column img">
+                <img class="demo cursor" src="https://gkpb.com.br/wp-content/uploads/2022/12/Whopper-em-Dobro-1024x576.jpg" style="width:100%" onclick="currentSlide(4)"
+                    alt="Reunião em família é uma coisa mágica">
+            </div>
+        </div>
+    </div>`;
 }
 
 function menuGrid() {
@@ -173,3 +238,50 @@ document.body.onload = inicio()
 navigationButton[0].addEventListener("click", inicio);
 navigationButton[1].addEventListener("click", menuGrid);
 navigationButton[2].addEventListener("click", viewCartItens);
+
+// navigationButton[2].addEventListener("click", closeModal());
+const depoisvcnomeia = [...document.querySelectorAll(".img")]; 
+
+depoisvcnomeia.forEach((element) => {
+    element.addEventListener("click", () => {
+        alert("clicou")
+        console.log(element)
+    })
+})
+
+function openModal() {
+    document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    captionText.innerHTML = dots[slideIndex - 1].alt;
+}
